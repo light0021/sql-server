@@ -1,9 +1,10 @@
+#alle importene for at scriptet skal fungere
 import time
 from Adafruit_IO import Client, Feed, RequestError
 import pyfirmata
 
 
-
+#nøkkelen til adafruit dashboardet til min bruker
 ADAFRUIT_IO_USERNAME = "stian4223"
 ADAFRUIT_IO_KEY = "aio_ewpD44MV3WTwLqMAJtaW26QpwZvW"
 
@@ -18,6 +19,7 @@ it.start()
 analog_input = board.get_pin('a:0:i')
 digital_output = board.get_pin('d:10:o')
 
+#her seier vi at koden skal sende og taimot signal fra adafruit 
 try:
     lys = aio.feeds('lys')
     potentiometer = aio.feeds('potentiometer')
